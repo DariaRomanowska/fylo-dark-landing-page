@@ -1,0 +1,42 @@
+header{
+  background-image: url("../images/bg-curvy-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  width: 100%;
+  padding-bottom: 200px;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .navigation{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    &__links{
+      width: 20%;
+      display: flex;
+      justify-content: space-between;
+      height: fit-content;
+    }
+  }
+
+  &__content{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 30px;
+    margin-top: 70px;
+
+    p{
+      width: 70%
+    }
+
+  }
+}
+

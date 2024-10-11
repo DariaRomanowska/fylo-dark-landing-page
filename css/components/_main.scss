@@ -1,0 +1,160 @@
+main {
+  background: $dark-blue-main;
+  margin-top: -51px;
+  position: relative;
+
+  .features {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+    row-gap: 80px;
+
+    .feature {
+      row-gap: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 40%;
+    }
+  }
+
+  .team {
+    width: 80%;
+    padding: 50px 0 250px 0;
+    &__description {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &--wrap {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+      }
+
+      &--link {
+        width: fit-content;
+        color: $cyan-button;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        cursor: pointer;
+
+        span {
+          display: flex;
+          background-image: url("../images/icon-arrow.svg");
+          width: 20px;
+          height: 20px;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+
+        &::after {
+          height: 2px;
+          width: 100%;
+          position: absolute;
+          background-color: $cyan-button;
+          content: "";
+          display: block;
+          left: 0;
+          bottom: -10px;
+
+        }
+
+        &:hover {
+          color: white;
+          font-weight: 600;
+
+          &::after {
+            background-color: white;
+          }
+
+          use.white {
+            fill: white;
+          }
+        }
+
+      }
+    }
+
+    &__opinions {
+      background-image: url("../images/bg-quotes.png");
+      background-repeat: no-repeat;
+      background-size: 10%;
+      background-position: left top;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 150px;
+      padding-top: 70px;
+      padding-left: 20px;
+    }
+
+    &__person {
+      width: 32%;
+      background: $dark-blue-testimonials;
+      padding: 25px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+
+      &--profil {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
+      }
+
+      .name {
+        font-weight: 600;
+        padding-bottom: 5px;
+      }
+    }
+  }
+
+  .sign-in {
+    position: absolute;
+    width: 70%;
+    background: hsl(217, 28%, 15%);
+    padding: 30px;
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    &__content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+      margin: 0 auto;
+      gap: 30px;
+
+      p{
+        width: 70%;
+      }
+
+      &--form{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        input{
+          border: 1px solid black;
+          border-radius: 30px;
+          padding: 10px 40px;
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
