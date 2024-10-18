@@ -101,6 +101,7 @@ html,
 body {
   height: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /*
@@ -329,6 +330,12 @@ header {
   width: 100%;
   padding-bottom: 200px;
 }
+@media only screen and (max-width: 760px) {
+  header {
+    background-image: url("../images/bg-curvy-mobile.svg");
+    padding-bottom: 0;
+  }
+}
 
 .header {
   display: flex;
@@ -346,6 +353,15 @@ header {
   justify-content: space-between;
   height: fit-content;
 }
+@media only screen and (max-width: 760px) {
+  .header .navigation img {
+    width: 30%;
+  }
+  .header .navigation__links {
+    width: fit-content;
+    gap: 10px;
+  }
+}
 .header__content {
   width: 60%;
   display: flex;
@@ -358,6 +374,17 @@ header {
 .header__content p {
   width: 70%;
 }
+@media only screen and (max-width: 760px) {
+  .header__content {
+    width: 98%;
+  }
+  .header__content .text2 {
+    font-size: 23px;
+  }
+  .header__content P {
+    width: 90%;
+  }
+}
 
 button {
   border-radius: 30px;
@@ -368,6 +395,11 @@ button {
   color: white;
   font-weight: 600;
   cursor: pointer;
+}
+@media only screen and (max-width: 760px) {
+  button {
+    padding: 15px;
+  }
 }
 button:hover {
   background: hsl(176, 68%, 64%);
@@ -386,6 +418,12 @@ main .features {
   justify-content: space-between;
   row-gap: 80px;
 }
+@media only screen and (max-width: 760px) {
+  main .features {
+    width: 98%;
+    justify-content: center;
+  }
+}
 main .features .feature {
   row-gap: 15px;
   display: flex;
@@ -393,20 +431,55 @@ main .features .feature {
   align-items: center;
   width: 40%;
 }
+@media only screen and (max-width: 760px) {
+  main .features .feature {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 760px) {
+  main {
+    padding-top: 100px;
+  }
+  main .features {
+    width: 98%;
+  }
+  main .feature {
+    width: 100%;
+  }
+}
 main .team {
   width: 80%;
-  padding: 50px 0 250px 0;
+  padding: 50px 0 400px 0;
+}
+@media only screen and (max-width: 760px) {
+  main .team {
+    padding: 50px 0 300px 0;
+  }
 }
 main .team__description {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (max-width: 760px) {
+  main .team__description {
+    flex-direction: column;
+  }
+}
 main .team__description--wrap {
   width: 40%;
   display: flex;
   flex-direction: column;
   row-gap: 15px;
+}
+@media only screen and (max-width: 760px) {
+  main .team__description--wrap {
+    width: 98%;
+  }
+  main .team__description--wrap .text2 {
+    font-size: 15px;
+    padding-top: 30px;
+  }
 }
 main .team__description--link {
   width: fit-content;
@@ -457,6 +530,15 @@ main .team__opinions {
   padding-top: 70px;
   padding-left: 20px;
 }
+@media only screen and (max-width: 760px) {
+  main .team__opinions {
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 0;
+    margin-top: 100px;
+    gap: 20px;
+  }
+}
 main .team__person {
   width: 32%;
   background: hsl(219, 30%, 18%);
@@ -465,6 +547,11 @@ main .team__person {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+}
+@media only screen and (max-width: 760px) {
+  main .team__person {
+    width: 100%;
+  }
 }
 main .team__person--profil {
   display: flex;
@@ -485,9 +572,16 @@ main .sign-in {
   width: 70%;
   background: hsl(217, 28%, 15%);
   padding: 30px;
-  bottom: -100px;
+  bottom: -7%;
+  border-radius: 10px;
   left: 50%;
   transform: translate(-50%, 0);
+  box-shadow: 6px 9px 10px -4px rgba(0, 0, 0, 0.36);
+}
+@media only screen and (max-width: 760px) {
+  main .sign-in {
+    width: 80%;
+  }
 }
 main .sign-in__content {
   display: flex;
@@ -497,8 +591,18 @@ main .sign-in__content {
   margin: 0 auto;
   gap: 30px;
 }
+@media only screen and (max-width: 760px) {
+  main .sign-in__content .text2 {
+    font-size: 16px;
+  }
+}
 main .sign-in__content p {
   width: 70%;
+}
+@media only screen and (max-width: 760px) {
+  main .sign-in__content p {
+    width: 100%;
+  }
 }
 main .sign-in__content--form {
   width: 100%;
@@ -506,11 +610,93 @@ main .sign-in__content--form {
   gap: 20px;
   justify-content: center;
 }
+@media only screen and (max-width: 760px) {
+  main .sign-in__content--form {
+    flex-direction: column;
+  }
+}
 main .sign-in__content--form input {
   border: 1px solid black;
   border-radius: 30px;
   padding: 10px 40px;
   width: 60%;
+}
+@media only screen and (max-width: 760px) {
+  main .sign-in__content--form input {
+    width: 100%;
+  }
+}
+
+footer {
+  background: hsl(216, 53%, 9%);
+  margin: -51px;
+  padding: 150px 0 30px 0;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+@media only screen and (max-width: 760px) {
+  .footer {
+    padding: 60px;
+  }
+}
+.footer__logo {
+  width: fit-content;
+}
+.footer__info {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+@media only screen and (max-width: 760px) {
+  .footer__info {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+.footer__info + div {
+  width: 22%;
+}
+@media only screen and (max-width: 760px) {
+  .footer__info + div {
+    width: 80%;
+  }
+}
+.footer__info--col {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  width: 10%;
+}
+@media only screen and (max-width: 760px) {
+  .footer__info--col {
+    width: 80%;
+  }
+}
+.footer__info--col div {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  column-gap: 30px;
+}
+.footer__info--border {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 18% !important;
+  height: fit-content;
+}
+@media only screen and (max-width: 760px) {
+  .footer__info--border {
+    justify-content: left;
+    gap: 10px;
+  }
+}
+.footer__info--border i {
+  font-size: 16px;
+  padding: 11px;
 }
 
 /*# sourceMappingURL=style.css.map */

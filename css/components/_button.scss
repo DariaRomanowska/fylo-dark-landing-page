@@ -7,6 +7,9 @@ button{
   color: white;
   font-weight: 600;
   cursor: pointer;
+  @media only screen and (max-width: 760px){
+    padding: 15px;
+  }
   &:hover{
     background: $cyan-button;
   }
