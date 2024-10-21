@@ -3,13 +3,10 @@ button{
   background: rgb(101,226,217);
   background: linear-gradient(100deg, rgba(101,226,217,1) 20%, rgba(51,158,204,1) 95%);
   border: unset;
-  padding: 15px 50px;
+  padding: 10px 50px;
   color: white;
   font-weight: 600;
   cursor: pointer;
-  @media only screen and (max-width: 760px){
-    padding: 15px;
-  }
   &:hover{
     background: $cyan-button;
   }

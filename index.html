@@ -38,7 +38,7 @@
             <h1 class="text2">All your files in one secure location, accessible anywhere.</h1>
             <p class="text5"> Fylo stores all your most important files in one secure location. Access them wherever
                 you need, share and collaborate with friends family, and co-workers.</p>
-            <button type="button">Get Started</button>
+            <button type="button"><a href="#form">Get Started</a></button>
         </div>
     </div>
 </header>
@@ -163,8 +163,13 @@
                 generous. If you have any
                 questions, our support team would be happy to help you.</p>
             <div class="sign-in__content--form">
-                <input type="email" placeholder="email@example.com">
+                <form method="post" class="form" id="form">
+                    <div class="input-wrap">
+                        <input type="text" placeholder="email@example.com" id="email">
+                        <p class="text-error" style="display: none">Please enter a valid email address</p>
+                    </div>
                 <button class="submit">Get Started For Free</button>
+                </form>
             </div>
         </div>
 
@@ -210,5 +215,6 @@
         </div>
     </div>
 </footer>
+<script src="js/form.js"></script>
 </body>
 </html>

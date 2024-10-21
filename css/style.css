@@ -391,15 +391,10 @@ button {
   background: rgb(101, 226, 217);
   background: linear-gradient(100deg, rgb(101, 226, 217) 20%, rgb(51, 158, 204) 95%);
   border: unset;
-  padding: 15px 50px;
+  padding: 10px 50px;
   color: white;
   font-weight: 600;
   cursor: pointer;
-}
-@media only screen and (max-width: 760px) {
-  button {
-    padding: 15px;
-  }
 }
 button:hover {
   background: hsl(176, 68%, 64%);
@@ -567,65 +562,6 @@ main .team__person .name {
   font-weight: 600;
   padding-bottom: 5px;
 }
-main .sign-in {
-  position: absolute;
-  width: 70%;
-  background: hsl(217, 28%, 15%);
-  padding: 30px;
-  bottom: -7%;
-  border-radius: 10px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  box-shadow: 6px 9px 10px -4px rgba(0, 0, 0, 0.36);
-}
-@media only screen and (max-width: 760px) {
-  main .sign-in {
-    width: 80%;
-  }
-}
-main .sign-in__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 0;
-  margin: 0 auto;
-  gap: 30px;
-}
-@media only screen and (max-width: 760px) {
-  main .sign-in__content .text2 {
-    font-size: 16px;
-  }
-}
-main .sign-in__content p {
-  width: 70%;
-}
-@media only screen and (max-width: 760px) {
-  main .sign-in__content p {
-    width: 100%;
-  }
-}
-main .sign-in__content--form {
-  width: 100%;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-@media only screen and (max-width: 760px) {
-  main .sign-in__content--form {
-    flex-direction: column;
-  }
-}
-main .sign-in__content--form input {
-  border: 1px solid black;
-  border-radius: 30px;
-  padding: 10px 40px;
-  width: 60%;
-}
-@media only screen and (max-width: 760px) {
-  main .sign-in__content--form input {
-    width: 100%;
-  }
-}
 
 footer {
   background: hsl(216, 53%, 9%);
@@ -665,6 +601,13 @@ footer {
     width: 80%;
   }
 }
+@media only screen and (max-width: 760px) {
+  .footer__info div:nth-child(3),
+  .footer__info div:nth-child(4),
+  .footer__info div:nth-child(5) {
+    padding-top: 50px;
+  }
+}
 .footer__info--col {
   display: flex;
   flex-direction: column;
@@ -685,18 +628,115 @@ footer {
 .footer__info--border {
   border: 1px solid #fff;
   border-radius: 50%;
-  width: 18% !important;
-  height: fit-content;
+  width: 35px !important;
+  height: 35px;
+  justify-content: center;
+  align-items: center !important;
 }
 @media only screen and (max-width: 760px) {
   .footer__info--border {
-    justify-content: left;
     gap: 10px;
   }
 }
 .footer__info--border i {
   font-size: 16px;
   padding: 11px;
+}
+.footer__info div.footer__info--border:nth-child(3) {
+  padding-top: 0;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+@media only screen and (max-width: 760px) {
+  .form {
+    flex-direction: column;
+  }
+}
+.form .input-wrap {
+  width: 60%;
+  position: relative;
+  height: fit-content;
+}
+@media only screen and (max-width: 760px) {
+  .form .input-wrap {
+    width: 100%;
+  }
+}
+.form .input-wrap input {
+  width: 100%;
+}
+.form .input-wrap .text-error {
+  position: absolute;
+  bottom: -20px;
+  left: 50px;
+  color: hsl(0, 100%, 63%);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sign-in {
+  position: absolute;
+  width: 70%;
+  background: hsl(217, 28%, 15%);
+  padding: 30px;
+  bottom: -5%;
+  border-radius: 10px;
+  left: 50%;
+  transform: translate(-50%, 5%);
+  box-shadow: 6px 9px 10px -4px rgba(0, 0, 0, 0.36);
+}
+@media only screen and (max-width: 760px) {
+  .sign-in {
+    width: 80%;
+  }
+}
+.sign-in__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  margin: 0 auto;
+  gap: 30px;
+}
+@media only screen and (max-width: 760px) {
+  .sign-in__content .text2 {
+    font-size: 16px;
+  }
+}
+.sign-in__content p {
+  width: 70%;
+}
+@media only screen and (max-width: 760px) {
+  .sign-in__content p {
+    width: 100%;
+  }
+}
+.sign-in__content--form {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+@media only screen and (max-width: 760px) {
+  .sign-in__content--form {
+    flex-direction: column;
+  }
+}
+.sign-in__content--form input {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 10px 40px;
+  width: 60%;
+}
+@media only screen and (max-width: 760px) {
+  .sign-in__content--form input {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
